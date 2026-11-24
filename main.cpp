@@ -8,6 +8,15 @@
 
 using namespace std;
 
+struct universityApplicants
+{
+    string Fio;
+    int pointsMath;
+    int pointsRussin;
+    int pointsInformatic;
+};
+
+
 vector<string> splitFields(const string& line) {
   vector<string> fields;
   size_t start = 0;
@@ -41,4 +50,11 @@ bool readInt(const string& text, int& value) {
 
 int main () {
   
+  ifstream file("priem.txt");
+
+  if (!file.is_open()) {
+    cout << "INVALID: file not found";
+    return 1;
+  }
+
 }
